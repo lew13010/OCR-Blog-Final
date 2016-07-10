@@ -111,7 +111,7 @@ if(!isset($_GET['id']) && $_GET['id'] == ''){
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="comment">Commentaire :</label>
                             <div class="col-md-10">
-                                <textarea class="form-control" name="comment" id="comment"></textarea>
+                                <textarea class="form-control" name="comment" id="comment" required></textarea>
                             </div>
                         </div>
                         <input type="hidden" name="idArt" value="<?php echo $id; ?>">

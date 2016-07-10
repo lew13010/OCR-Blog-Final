@@ -1,5 +1,6 @@
 <?php
 require('bdd.inc.php');
+$id = $_POST['idArt'];
 
 if(isset($_POST['comment']) && $_POST['comment'] != ''){
     $id = $_POST['idArt'];
