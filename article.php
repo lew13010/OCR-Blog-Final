@@ -1,4 +1,7 @@
 <?php
+session_start();
+$token = md5(bin2hex(openssl_random_pseudo_bytes(5)));
+$_SESSION['token'] = $token;
 require('bdd.inc.php');
 ?>
 <!DOCTYPE html>
@@ -115,6 +118,8 @@ if(!isset($_GET['id']) && $_GET['id'] == ''){
                             </div>
                         </div>
                         <input type="hidden" name="idArt" value="<?php echo $id; ?>">
+                        <input type="hidden" name="token" value="<?php echo $token; ?>">
+
                         <div class="form-group">
                             <div class="col-md-offset-2 col-md-10">
                                 <input class="btn btn-default" type="submit" value="Valider">

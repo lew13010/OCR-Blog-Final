@@ -113,6 +113,7 @@ if(!isset($_SESSION['pseudo']) && !isset($_SESSION['mdp'])){
                                 <input type="text" class="form-control" id="auteur" name="auteur" value="" required>
                             </div>
                         </div>
+                        <input type="hidden" name="token" value="<?php echo $token; ?>">
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                             <button type="submit" class="btn btn-success">Enregistrer</button>
